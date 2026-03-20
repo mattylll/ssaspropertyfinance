@@ -24,7 +24,7 @@ export default function SippMortgageCalculatorPage() {
 
         <SippMortgageCalculatorClient />
 
-        {/* FCA Disclaimer */}
+        {/* Disclaimer */}
         <div className="glass-card p-4 mt-8">
           <p className="text-xs text-white/40 leading-relaxed">
             <strong className="text-white/60">Important:</strong> This calculator

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | SIPP Property Finance",
   },
   description:
-    "Specialist SIPP and SSAS commercial property finance brokers. Compare SIPP mortgage rates, use our calculators, and get indicative terms in minutes. FCA regulated.",
+    "Specialist SIPP and SSAS commercial property finance brokers. Compare SIPP mortgage rates, use our calculators, and get indicative terms in minutes.",
   keywords: [
     "SIPP commercial property mortgage",
     "SIPP property finance",

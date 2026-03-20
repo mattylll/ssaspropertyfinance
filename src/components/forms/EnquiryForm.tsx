@@ -560,12 +560,12 @@ export function EnquiryForm() {
 
               <div>
                 <Label className="text-white/70 text-sm mb-2 block">
-                  IFA FCA Number (optional)
+                  IFA Reference Number (optional)
                 </Label>
                 <Input
                   {...register("ifaFcaNumber")}
                   className="glass-input text-white"
-                  placeholder="FCA reference number"
+                  placeholder="Firm reference number"
                 />
               </div>
 

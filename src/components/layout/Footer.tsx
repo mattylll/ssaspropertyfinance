@@ -66,16 +66,17 @@ export function Footer() {
 
         <Separator className="my-8 bg-white/10" />
 
-        {/* FCA Disclaimer */}
+        {/* Disclaimer */}
         <div className="glass-card p-4 mb-6">
           <p className="text-xs text-white/40 leading-relaxed">
-            <strong className="text-white/60">FCA Disclosure:</strong> Lenzie
-            Consulting Ltd is authorised and regulated by the Financial Conduct
-            Authority. FCA Firm Reference Number: [FRN]. Registered in England
-            and Wales. Registered office: Hertfordshire, UK. Your property may be
-            repossessed if you do not keep up repayments on your mortgage. SIPP
-            commercial property mortgages are regulated by the FCA. The value of
-            pensions and investments can go down as well as up.
+            <strong className="text-white/60">Disclaimer:</strong> Lenzie
+            Consulting Ltd trading as SIPP Property Finance. Registered in England
+            and Wales. Registered office: Hertfordshire, UK. SIPP and SSAS
+            commercial property loans are not regulated by the Financial Conduct
+            Authority. The information on this website does not constitute
+            financial advice. The value of pensions and investments can go down
+            as well as up. Always seek independent financial advice before
+            making pension investment decisions.
           </p>
         </div>
 
@@ -92,7 +93,7 @@ export function Footer() {
             <Link href="/terms" className="hover:text-gold transition-colors">
               Terms
             </Link>
-            <span>ICO Registration: [Number]</span>
+            <span>Lenzie Consulting Ltd</span>
           </div>
         </div>
       </div>

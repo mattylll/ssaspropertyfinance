@@ -38,9 +38,9 @@ const features = [
   },
   {
     icon: Shield,
-    title: "FCA Regulated",
+    title: "Trusted Specialists",
     description:
-      "We are authorised and regulated by the Financial Conduct Authority, giving you confidence in our advice.",
+      "Dedicated SIPP and SSAS commercial property finance specialists with 15+ years of market experience.",
   },
 ];
 

@@ -103,8 +103,8 @@ export default function ContactPage() {
                 indicative terms and ongoing case updates.
               </p>
               <p className="text-sm text-white/50">
-                Include your FCA number in the form and we&apos;ll prioritise
-                your enquiry.
+                Include your firm reference number in the form and
+                we&apos;ll prioritise your enquiry.
               </p>
             </div>
           </div>

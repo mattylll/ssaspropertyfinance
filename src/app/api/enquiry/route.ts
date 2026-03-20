@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
             </div>
             <p style="color: rgba(255,255,255,0.4); font-size: 12px; line-height: 1.5;">
               This email confirms receipt of your enquiry only. It is not a mortgage offer or financial advice.
-              SIPP Property Finance is a trading name of Lenzie Consulting Ltd, authorised and regulated by the Financial Conduct Authority.
+              SIPP Property Finance is a trading name of Lenzie Consulting Ltd. SIPP and SSAS commercial property loans are not regulated by the FCA.
             </p>
           </div>
         `,

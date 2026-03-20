@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Shield, Landmark, Clock, PoundSterling } from "lucide-react";
 
 const trustItems = [
-  { icon: Shield, label: "FCA Regulated", value: "Authorised & Regulated" },
+  { icon: Shield, label: "Specialist Broker", value: "SIPP & SSAS Experts" },
   { icon: Landmark, label: "HMRC Compliant", value: "Pension Property Rules" },
   { icon: Clock, label: "Experience", value: "15+ Years" },
   { icon: PoundSterling, label: "Arranged", value: "£50M+ Finance" },
