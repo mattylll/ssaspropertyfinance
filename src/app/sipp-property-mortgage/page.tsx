@@ -107,12 +107,12 @@ export default function SippPropertyMortgagePage() {
 
           <div className="grid grid-cols-2 gap-4">
             {features.map((f) => (
-              <div key={f.title} className="glass-card-hover p-5">
+              <div key={f.title} className="glass-card-hover p-6">
                 <f.icon className="w-6 h-6 text-gold mb-3" />
                 <h3 className="text-sm font-semibold text-white mb-1">
                   {f.title}
                 </h3>
-                <p className="text-xs text-white/40">{f.description}</p>
+                <p className="text-xs text-white/60">{f.description}</p>
               </div>
             ))}
           </div>
@@ -171,7 +171,7 @@ export default function SippPropertyMortgagePage() {
           <h2 className="font-heading text-3xl text-white mb-4">
             Ready to Explore SIPP Property Finance?
           </h2>
-          <p className="text-white/50 max-w-xl mx-auto mb-6">
+          <p className="text-white/60 max-w-xl mx-auto mb-6">
             Complete our short enquiry form and receive indicative terms from
             specialist SIPP lenders within 24 hours. No obligation, no fees for
             initial consultation.
@@ -187,7 +187,54 @@ export default function SippPropertyMortgagePage() {
             </Link>
           </Button>
         </section>
+
+        {/* Related Guides */}
+        <section className="mt-16">
+          <h2 className="font-heading text-2xl text-white mb-6">Related Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "SIPP Mortgage Explained: How Pension Borrowing Works", href: "/learn/sipp-mortgage-explained" },
+              { title: "How Much Can a SIPP Borrow? The 50% LTV Rule", href: "/learn/how-much-can-a-sipp-borrow" },
+              { title: "SIPP Mortgage Interest Rates: What to Expect in 2026", href: "/learn/sipp-mortgage-interest-rates" },
+              { title: "Fixed vs Variable Rate SIPP Mortgages", href: "/learn/fixed-vs-variable-sipp-mortgage" },
+              { title: "SIPP Mortgage Fees: Every Cost Explained", href: "/learn/sipp-mortgage-fees" },
+              { title: "Case Study: Business Owner Buys Office Through a SIPP", href: "/learn/case-study-business-owner-buys-office-sipp" },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="glass-card-hover p-5 group block"
+              >
+                <h3 className="text-sm font-semibold text-white group-hover:text-gold transition-colors leading-snug">
+                  {guide.title}
+                </h3>
+                <span className="text-xs text-gold/60 mt-2 inline-flex items-center gap-1 group-hover:text-gold transition-colors">
+                  Read guide <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FinancialProduct",
+            name: "SIPP Commercial Property Mortgage",
+            description:
+              "Specialist SIPP commercial property mortgages from 5.49%. Up to 50% LTV, 25 year terms, 15+ specialist lenders.",
+            provider: {
+              "@type": "FinancialService",
+              name: "SIPP Property Finance",
+              url: "https://sipppropertyfinance.co.uk",
+            },
+            url: "https://sipppropertyfinance.co.uk/sipp-property-mortgage",
+            category: "Commercial Property Mortgage",
+          }),
+        }}
+      />
     </div>
   );
 }

@@ -163,51 +163,51 @@ export function SippMortgageCalculatorClient() {
       >
         {/* Summary cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Max Loan
             </p>
             <p className="text-xl font-bold text-gold">{fmt(results.maxLoan)}</p>
-            <p className="text-xs text-white/30 mt-1">
+            <p className="text-xs text-white/40 mt-1">
               {results.ltvActual}% LTV
             </p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Monthly Payment
             </p>
             <p className="text-xl font-bold text-white">
               {fmt(results.monthlyPayment)}
             </p>
-            <p className="text-xs text-white/30 mt-1">Capital & interest</p>
+            <p className="text-xs text-white/40 mt-1">Capital & interest</p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Deposit Required
             </p>
             <p className="text-xl font-bold text-blue-accent">
               {fmt(results.depositRequired)}
             </p>
-            <p className="text-xs text-white/30 mt-1">From SIPP fund</p>
+            <p className="text-xs text-white/40 mt-1">From SIPP fund</p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Total Cost
             </p>
             <p className="text-xl font-bold text-white">
               {fmt(results.totalCost)}
             </p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Total Interest
             </p>
             <p className="text-xl font-bold text-white/70">
               {fmt(results.totalInterest)}
             </p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Fund Remaining
             </p>
             <p
@@ -270,7 +270,7 @@ export function SippMortgageCalculatorClient() {
           </h3>
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-white/40 text-xs uppercase tracking-wider">
+              <tr className="text-white/60 text-xs uppercase tracking-wider">
                 <th className="text-left py-2 pr-4">Year</th>
                 <th className="text-right py-2 px-2">Opening</th>
                 <th className="text-right py-2 px-2">Payment</th>

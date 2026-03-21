@@ -16,7 +16,7 @@ export default function ContactPage() {
           <h1 className="font-heading text-4xl sm:text-5xl text-white mb-4">
             Get Indicative Terms
           </h1>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-2xl mx-auto">
             Complete the enquiry form below and a specialist SIPP property
             finance broker will be in touch within 24 hours with indicative
             terms tailored to your requirements.
@@ -40,7 +40,7 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 text-gold mt-0.5" />
                   <div>
                     <p className="text-sm text-white/70">Phone</p>
-                    <p className="text-sm text-white">01onal-number</p>
+                    <p className="text-sm text-white">0800 XXX XXXX</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -73,7 +73,7 @@ export default function ContactPage() {
               <h3 className="font-heading text-lg text-white mb-3">
                 What Happens Next?
               </h3>
-              <ol className="space-y-3 text-sm text-white/50">
+              <ol className="space-y-3 text-sm text-white/60">
                 <li className="flex items-start gap-2">
                   <span className="text-gold font-mono">1.</span>
                   We review your enquiry within 24 hours
@@ -97,12 +97,12 @@ export default function ContactPage() {
               <h3 className="font-heading text-lg text-white mb-3">
                 IFA / Professional Referrals
               </h3>
-              <p className="text-sm text-white/50 mb-3">
+              <p className="text-sm text-white/60 mb-3">
                 Are you an IFA, solicitor, or accountant referring a client? We
                 offer a dedicated professional referral process with co-branded
                 indicative terms and ongoing case updates.
               </p>
-              <p className="text-sm text-white/50">
+              <p className="text-sm text-white/60">
                 Include your firm reference number in the form and
                 we&apos;ll prioritise your enquiry.
               </p>

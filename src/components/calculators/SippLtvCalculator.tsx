@@ -79,7 +79,7 @@ export function SippLtvCalculatorClient() {
         className="space-y-4"
       >
         <div className="glass-card p-6">
-          <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
             Maximum Borrowing (50% LTV)
           </p>
           <p className="text-3xl font-bold text-gold">
@@ -88,14 +88,14 @@ export function SippLtvCalculatorClient() {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 mb-1">SIPP Deposit</p>
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 mb-1">SIPP Deposit</p>
             <p className="text-xl font-bold text-white">
               {fmt(results.depositFromFund)}
             </p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 mb-1">Fund Remaining</p>
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 mb-1">Fund Remaining</p>
             <p
               className={`text-xl font-bold ${
                 results.fundSufficient ? "text-emerald-400" : "text-red-400"
@@ -107,13 +107,13 @@ export function SippLtvCalculatorClient() {
         </div>
 
         <div className="glass-card p-6">
-          <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
             Total Purchasing Power
           </p>
           <p className="text-3xl font-bold text-blue-accent">
             {fmt(results.totalPurchasePower)}
           </p>
-          <p className="text-xs text-white/30 mt-1">
+          <p className="text-xs text-white/40 mt-1">
             Maximum property value your SIPP can target
           </p>
         </div>

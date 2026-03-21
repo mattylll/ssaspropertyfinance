@@ -15,7 +15,7 @@ export default function SippLtvCalculatorPage() {
           <h1 className="font-heading text-4xl sm:text-5xl text-white mb-4">
             SIPP LTV Calculator
           </h1>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-2xl mx-auto">
             Understand how much your SIPP can borrow under the 50% LTV cap.
             Enter your property value and fund size to see your borrowing power.
           </p>
@@ -24,7 +24,7 @@ export default function SippLtvCalculatorPage() {
         <SippLtvCalculatorClient />
 
         <div className="glass-card p-4 mt-8">
-          <p className="text-xs text-white/40 leading-relaxed">
+          <p className="text-sm text-white/60 leading-relaxed">
             <strong className="text-white/60">Important:</strong> SIPP borrowing
             is limited to 50% of the net value of the scheme assets. This
             calculator provides illustrative figures only. Eligibility depends on

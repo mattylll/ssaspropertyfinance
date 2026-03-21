@@ -36,7 +36,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-20 border-y border-white/10 bg-white/[0.01]">
+    <section className="py-16 border-y border-white/10 bg-white/[0.01]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export function HowItWorks() {
           <h2 className="font-heading text-3xl sm:text-4xl text-white mb-4">
             How It Works
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-2xl mx-auto">
             From first enquiry to completion, we guide you through every step of
             securing SIPP property finance.
           </p>
@@ -78,7 +78,7 @@ export function HowItWorks() {
               <h3 className="font-heading text-lg text-white mt-1 mb-2">
                 {step.title}
               </h3>
-              <p className="text-sm text-white/45 leading-relaxed">
+              <p className="text-sm text-white/60 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

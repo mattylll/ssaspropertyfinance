@@ -29,6 +29,7 @@ const navLinks = [
     ],
   },
   { label: "Property Guide", href: "/commercial-property-sipp" },
+  { label: "Learn", href: "/learn" },
   { label: "Lenders", href: "/lenders" },
   { label: "Contact", href: "/contact", icon: Phone },
 ];
@@ -63,7 +64,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="px-3 py-2 text-sm text-white/70 hover:text-gold transition-colors rounded-lg hover:bg-white/5"
+                    className="nav-link-hover px-3 py-2 text-sm text-white/70 hover:text-gold transition-colors rounded-lg hover:bg-white/5"
                   >
                     {link.label}
                   </Link>
@@ -92,7 +93,7 @@ export function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="px-3 py-2 text-sm text-white/70 hover:text-gold transition-colors rounded-lg hover:bg-white/5"
+                  className="nav-link-hover px-3 py-2 text-sm text-white/70 hover:text-gold transition-colors rounded-lg hover:bg-white/5"
                 >
                   {link.label}
                 </Link>
@@ -114,6 +115,8 @@ export function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 text-white/70 hover:text-gold"
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -144,7 +147,7 @@ export function Navbar() {
                       key={child.href}
                       href={child.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block pl-8 pr-3 py-2 text-sm text-white/50 hover:text-gold hover:bg-white/5 rounded-lg transition-colors"
+                      className="block pl-8 pr-3 py-2 text-sm text-white/60 hover:text-gold hover:bg-white/5 rounded-lg transition-colors"
                     >
                       {child.label}
                     </Link>

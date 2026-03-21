@@ -108,7 +108,7 @@ export function RentalYieldCalculatorClient() {
       >
         <div className="grid grid-cols-2 gap-4">
           <div className="glass-card p-6">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Gross Yield
             </p>
             <p className="text-3xl font-bold text-gold">
@@ -116,7 +116,7 @@ export function RentalYieldCalculatorClient() {
             </p>
           </div>
           <div className="glass-card p-6">
-            <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+            <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
               Net Yield
             </p>
             <p className="text-3xl font-bold text-blue-accent">
@@ -125,24 +125,24 @@ export function RentalYieldCalculatorClient() {
           </div>
         </div>
 
-        <div className="glass-card p-5">
-          <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+        <div className="glass-card p-6">
+          <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
             Net Income (before mortgage)
           </p>
           <p className="text-2xl font-bold text-white">
             {fmt(results.netIncome)}
           </p>
-          <p className="text-xs text-white/30 mt-1">Annual rent minus expenses</p>
+          <p className="text-xs text-white/40 mt-1">Annual rent minus expenses</p>
         </div>
 
         <div
-          className={`glass-card p-5 ${
+          className={`glass-card p-6 ${
             results.annualSurplus >= 0
               ? "border-emerald-500/20"
               : "border-red-500/20"
           }`}
         >
-          <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+          <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
             Annual Surplus / Deficit
           </p>
           <p
@@ -154,15 +154,15 @@ export function RentalYieldCalculatorClient() {
           >
             {fmt(results.annualSurplus)}
           </p>
-          <p className="text-xs text-white/30 mt-1">
+          <p className="text-xs text-white/40 mt-1">
             {results.annualSurplus >= 0
               ? "Your SIPP generates a surplus after mortgage costs"
               : "Your SIPP will need topping up to cover the shortfall"}
           </p>
         </div>
 
-        <div className="glass-card p-5">
-          <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+        <div className="glass-card p-6">
+          <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
             Monthly Cash Position
           </p>
           <p
@@ -173,7 +173,7 @@ export function RentalYieldCalculatorClient() {
             }`}
           >
             {fmt(results.monthlySurplus)}
-            <span className="text-sm text-white/40 ml-1">/ month</span>
+            <span className="text-sm text-white/60 ml-1">/ month</span>
           </p>
         </div>
       </motion.div>

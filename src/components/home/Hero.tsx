@@ -1,36 +1,46 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Calculator, Shield, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-16">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-            scale: [1, 1.1, 1],
-          }}
+          animate={
+            prefersReducedMotion
+              ? {}
+              : {
+                  x: [0, 30, 0],
+                  y: [0, -20, 0],
+                  scale: [1, 1.1, 1],
+                }
+          }
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-20 left-[10%] w-[500px] h-[500px] rounded-full bg-blue-accent/5 blur-[100px]"
         />
         <motion.div
-          animate={{
-            x: [0, -20, 0],
-            y: [0, 30, 0],
-            scale: [1, 1.15, 1],
-          }}
+          animate={
+            prefersReducedMotion
+              ? {}
+              : {
+                  x: [0, -20, 0],
+                  y: [0, 30, 0],
+                  scale: [1, 1.15, 1],
+                }
+          }
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
           className="absolute bottom-20 right-[10%] w-[400px] h-[400px] rounded-full bg-gold/5 blur-[100px]"
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — Copy */}
           <motion.div
@@ -81,7 +91,7 @@ export function Hero() {
             </div>
 
             {/* Trust badges */}
-            <div className="flex items-center gap-6 text-sm text-white/40">
+            <div className="flex items-center gap-6 text-sm text-white/60">
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-gold" />
                 <span>50% Max LTV</span>
@@ -129,9 +139,9 @@ export function Hero() {
                 transition={{ duration: 0.6, delay: 0.5 + i * 0.1 }}
                 className="glass-card-hover p-6"
               >
-                <p className="text-sm text-white/50 mb-1">{stat.label}</p>
+                <p className="text-sm text-white/60 mb-1">{stat.label}</p>
                 <p className="text-2xl font-bold text-gold mb-1">{stat.value}</p>
-                <p className="text-xs text-white/40">{stat.sub}</p>
+                <p className="text-xs text-white/50">{stat.sub}</p>
               </motion.div>
             ))}
           </motion.div>

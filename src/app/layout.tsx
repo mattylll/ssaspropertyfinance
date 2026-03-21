@@ -47,6 +47,14 @@ export const metadata: Metadata = {
     title: "SIPP Property Finance | Specialist Commercial Property Mortgage Brokers",
     description:
       "Specialist SIPP and SSAS commercial property finance brokers. Compare rates, use calculators, get indicative terms.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SIPP Property Finance - Specialist Commercial Property Mortgage Brokers",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -75,6 +83,21 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </ConvexClientProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FinancialService",
+              name: "SIPP Property Finance",
+              description:
+                "Specialist SIPP and SSAS commercial property finance brokers. Compare mortgage rates and get indicative terms.",
+              url: "https://sipppropertyfinance.co.uk",
+              areaServed: "GB",
+              serviceType: "Commercial Property Mortgage Brokerage",
+            }),
+          }}
+        />
       </body>
     </html>
   );

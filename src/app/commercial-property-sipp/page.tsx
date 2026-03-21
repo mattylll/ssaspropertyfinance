@@ -76,7 +76,7 @@ export default function CommercialPropertySippPage() {
               <li key={href}>
                 <a
                   href={href}
-                  className="text-white/50 hover:text-gold transition-colors"
+                  className="text-white/60 hover:text-gold transition-colors"
                 >
                   {label}
                 </a>
@@ -158,7 +158,7 @@ export default function CommercialPropertySippPage() {
               </div>
             </div>
             <div className="glass-card p-4 mt-4 border-gold/20">
-              <p className="text-xs text-white/40 flex items-start gap-2">
+              <p className="text-sm text-white/60 flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                 Source: HMRC Registered Pension Schemes Manual (RPSM03107030).
                 Always verify current rules with your SIPP provider before
@@ -265,7 +265,7 @@ export default function CommercialPropertySippPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">{s.title}</h3>
-                    <p className="text-sm text-white/50">{s.desc}</p>
+                    <p className="text-sm text-white/60">{s.desc}</p>
                   </div>
                 </div>
               ))}
@@ -294,12 +294,51 @@ export default function CommercialPropertySippPage() {
           </section>
         </div>
 
+        {/* Explore Further */}
+        <section className="mt-16">
+          <h2 className="font-heading text-2xl text-white mb-6">
+            Explore Further
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "What Is a SIPP? Complete Guide for Property Investors", href: "/learn/what-is-a-sipp" },
+              { title: "The Complete Guide to SIPP Rules for Commercial Property", href: "/learn/sipp-rules-for-commercial-property" },
+              { title: "What Types of Property Can a SIPP Hold?", href: "/learn/what-types-of-property-can-a-sipp-hold" },
+              { title: "Tax Benefits of Buying Property Through a SIPP", href: "/learn/tax-benefits-sipp-property" },
+              { title: "Connected Party Transactions: HMRC Rules Explained", href: "/learn/connected-party-transactions-hmrc" },
+              { title: "How Does a SIPP Property Purchase Work? Step by Step", href: "/learn/how-does-a-sipp-property-purchase-work" },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="glass-card-hover p-5 group block"
+              >
+                <h3 className="text-sm font-semibold text-white group-hover:text-gold transition-colors leading-snug">
+                  {guide.title}
+                </h3>
+                <span className="text-xs text-gold/60 mt-2 inline-flex items-center gap-1 group-hover:text-gold transition-colors">
+                  Read guide <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link
+              href="/learn"
+              className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-light transition-colors font-medium"
+            >
+              Browse all guides
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="glass-card p-10 text-center mt-16">
           <h2 className="font-heading text-3xl text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-white/50 max-w-xl mx-auto mb-6">
+          <p className="text-white/60 max-w-xl mx-auto mb-6">
             Speak to a specialist SIPP property finance broker today. We&apos;ll
             assess your situation and provide indicative terms within 24 hours.
           </p>
@@ -325,6 +364,31 @@ export default function CommercialPropertySippPage() {
           </div>
         </section>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "SIPP Property Finance - The Complete UK Guide",
+            description:
+              "Complete guide to buying commercial property through a SIPP. HMRC rules, permitted property types, borrowing limits, tax benefits, and step-by-step process.",
+            author: {
+              "@type": "Organization",
+              name: "SIPP Property Finance",
+              url: "https://sipppropertyfinance.co.uk",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "SIPP Property Finance",
+              url: "https://sipppropertyfinance.co.uk",
+            },
+            url: "https://sipppropertyfinance.co.uk/commercial-property-sipp",
+            mainEntityOfPage:
+              "https://sipppropertyfinance.co.uk/commercial-property-sipp",
+          }),
+        }}
+      />
     </div>
   );
 }

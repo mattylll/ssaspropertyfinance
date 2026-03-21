@@ -93,10 +93,22 @@ export default function LendersPage() {
           <h1 className="font-heading text-4xl sm:text-5xl text-white mb-4">
             SIPP Commercial Property Lenders
           </h1>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-2xl mx-auto">
             Our specialist panel of UK SIPP and SSAS commercial property mortgage
             lenders. We compare terms across all lenders to find the best deal
             for your pension fund.
+          </p>
+        </div>
+
+        <div className="glass-card p-6 mb-8">
+          <p className="text-sm text-white/60 leading-relaxed">
+            Our lender panel comprises specialist UK institutions that actively
+            lend to SIPP and SSAS trustees for commercial property acquisition.
+            Each lender has been vetted for their understanding of pension
+            property transactions, speed of service, and competitive terms. As
+            whole-of-market brokers, we are not tied to any single lender — we
+            compare across the full panel to secure the most favourable rates,
+            LTV, and terms for your specific pension fund and property type.
           </p>
         </div>
 
@@ -137,25 +149,25 @@ export default function LendersPage() {
                 {/* Key stats */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:w-1/3">
                   <div>
-                    <p className="text-xs text-white/40">Min Loan</p>
+                    <p className="text-xs text-white/60">Min Loan</p>
                     <p className="text-sm font-medium text-white">
                       {lender.minLoan}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-white/40">Max Loan</p>
+                    <p className="text-xs text-white/60">Max Loan</p>
                     <p className="text-sm font-medium text-white">
                       {lender.maxLoan}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-white/40">Max LTV</p>
+                    <p className="text-xs text-white/60">Max LTV</p>
                     <p className="text-sm font-medium text-gold">
                       {lender.maxLtv}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-white/40">From</p>
+                    <p className="text-xs text-white/60">From</p>
                     <p className="text-sm font-medium text-gold">
                       {lender.minRate}
                     </p>
@@ -168,7 +180,7 @@ export default function LendersPage() {
                     {lender.features.map((f) => (
                       <p
                         key={f}
-                        className="text-xs text-white/50 flex items-center gap-1.5"
+                        className="text-xs text-white/60 flex items-center gap-1.5"
                       >
                         <Check className="w-3 h-3 text-emerald-400" />
                         {f}
@@ -195,7 +207,7 @@ export default function LendersPage() {
         </div>
 
         <div className="glass-card p-4 mt-8">
-          <p className="text-xs text-white/40 leading-relaxed">
+          <p className="text-sm text-white/60 leading-relaxed">
             <strong className="text-white/60">Note:</strong> Rates and criteria
             shown are indicative and subject to change. Actual terms depend on
             property type, location, borrower profile, and market conditions.
@@ -204,6 +216,37 @@ export default function LendersPage() {
           </p>
         </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            name: "SIPP Property Finance - Lender Panel",
+            description:
+              "Compare specialist SIPP and SSAS commercial property mortgage lenders. Rates from 5.49%, up to 50% LTV.",
+            url: "https://sipppropertyfinance.co.uk/lenders",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "SIPP Commercial Property Lenders",
+              itemListElement: lenders.map((lender, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "FinancialProduct",
+                  name: `${lender.name} - SIPP Mortgage`,
+                  description: lender.features.join(". "),
+                  provider: {
+                    "@type": "Organization",
+                    name: lender.name,
+                  },
+                },
+              })),
+            },
+          }),
+        }}
+      />
     </div>
   );
 }

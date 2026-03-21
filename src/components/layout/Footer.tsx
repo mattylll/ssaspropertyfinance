@@ -9,6 +9,14 @@ const footerLinks = {
     { label: "Commercial Property Guide", href: "/commercial-property-sipp" },
     { label: "Lender Panel", href: "/lenders" },
   ],
+  Learn: [
+    { label: "Learning Centre", href: "/learn" },
+    { label: "What Is a SIPP?", href: "/learn/what-is-a-sipp" },
+    { label: "SIPP Mortgage Explained", href: "/learn/sipp-mortgage-explained" },
+    { label: "SSAS vs SIPP", href: "/learn/ssas-vs-sipp" },
+    { label: "Tax Benefits of SIPP Property", href: "/learn/tax-benefits-sipp-property" },
+    { label: "Case Studies", href: "/learn/case-study-business-owner-buys-office-sipp" },
+  ],
   Calculators: [
     { label: "SIPP Mortgage Calculator", href: "/sipp-mortgage-calculator" },
     { label: "SIPP LTV Calculator", href: "/sipp-ltv-calculator" },
@@ -25,7 +33,7 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-navy/50 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
@@ -37,10 +45,11 @@ export function Footer() {
                 SIPP Property Finance
               </span>
             </Link>
-            <p className="text-sm text-white/50 leading-relaxed">
-              Specialist SIPP and SSAS commercial property finance brokers.
-              Helping UK pension trustees and IFAs access competitive commercial
-              mortgage rates.
+            <p className="text-sm text-white/60 leading-relaxed">
+              Founded by Matt Lenzie — board advisor to a SIPP business with
+              over £2.9bn assets under advisory, former banker and corporate
+              finance partner. Helping UK pension trustees and IFAs access
+              competitive commercial mortgage rates.
             </p>
           </div>
 
@@ -53,7 +62,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/50 hover:text-gold transition-colors"
+                      className="text-sm text-white/60 hover:text-gold transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -68,7 +77,7 @@ export function Footer() {
 
         {/* Disclaimer */}
         <div className="glass-card p-4 mb-6">
-          <p className="text-xs text-white/40 leading-relaxed">
+          <p className="text-sm text-white/50 leading-relaxed">
             <strong className="text-white/60">Disclaimer:</strong> Lenzie
             Consulting Ltd trading as SIPP Property Finance. Registered in England
             and Wales. Registered office: Hertfordshire, UK. SIPP and SSAS
@@ -82,11 +91,11 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/30">
+          <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Lenzie Consulting Ltd trading as
             SIPP Property Finance. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs text-white/30">
+          <div className="flex items-center gap-4 text-xs text-white/40">
             <Link href="/privacy" className="hover:text-gold transition-colors">
               Privacy Policy
             </Link>

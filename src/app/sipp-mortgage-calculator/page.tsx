@@ -15,7 +15,7 @@ export default function SippMortgageCalculatorPage() {
           <h1 className="font-heading text-4xl sm:text-5xl text-white mb-4">
             SIPP Mortgage Calculator
           </h1>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-2xl mx-auto">
             Calculate your SIPP commercial property mortgage. Enter your property
             value, pension fund size, and desired terms to see indicative monthly
             payments and a full amortisation schedule.
@@ -26,7 +26,7 @@ export default function SippMortgageCalculatorPage() {
 
         {/* Disclaimer */}
         <div className="glass-card p-4 mt-8">
-          <p className="text-xs text-white/40 leading-relaxed">
+          <p className="text-sm text-white/60 leading-relaxed">
             <strong className="text-white/60">Important:</strong> This calculator
             provides illustrative figures only and does not constitute financial
             advice. Actual rates, terms, and eligibility depend on the lender,

@@ -98,12 +98,12 @@ export default function SsasPropertyFinancePage() {
 
           <div className="grid grid-cols-2 gap-4">
             {features.map((f) => (
-              <div key={f.title} className="glass-card-hover p-5">
+              <div key={f.title} className="glass-card-hover p-6">
                 <f.icon className="w-6 h-6 text-gold mb-3" />
                 <h3 className="text-sm font-semibold text-white mb-1">
                   {f.title}
                 </h3>
-                <p className="text-xs text-white/40">{f.description}</p>
+                <p className="text-xs text-white/60">{f.description}</p>
               </div>
             ))}
           </div>
@@ -155,7 +155,7 @@ export default function SsasPropertyFinancePage() {
           <h2 className="font-heading text-3xl text-white mb-4">
             Explore SSAS Property Finance Options
           </h2>
-          <p className="text-white/50 max-w-xl mx-auto mb-6">
+          <p className="text-white/60 max-w-xl mx-auto mb-6">
             Whether you&apos;re looking at commercial property acquisition or a
             loanback facility, our specialist team can guide you through the
             process.
@@ -171,7 +171,54 @@ export default function SsasPropertyFinancePage() {
             </Link>
           </Button>
         </section>
+
+        {/* Related Guides */}
+        <section className="mt-16">
+          <h2 className="font-heading text-2xl text-white mb-6">Related Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "What Is a SSAS? Small Self-Administered Schemes Explained", href: "/learn/what-is-a-ssas" },
+              { title: "SSAS vs SIPP: Which Is Better for Property Investment?", href: "/learn/ssas-vs-sipp" },
+              { title: "SSAS Loanback Rules: The Complete HMRC Guide", href: "/learn/ssas-loanback-rules" },
+              { title: "How to Use a SSAS Loanback to Buy Business Premises", href: "/learn/ssas-loanback-buy-business-premises" },
+              { title: "SSAS Trustee Responsibilities When Holding Property", href: "/learn/ssas-trustee-responsibilities" },
+              { title: "Case Study: Director Uses SSAS Loanback for New Premises", href: "/learn/case-study-ssas-loanback-new-premises" },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="glass-card-hover p-5 group block"
+              >
+                <h3 className="text-sm font-semibold text-white group-hover:text-gold transition-colors leading-snug">
+                  {guide.title}
+                </h3>
+                <span className="text-xs text-gold/60 mt-2 inline-flex items-center gap-1 group-hover:text-gold transition-colors">
+                  Read guide <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FinancialProduct",
+            name: "SSAS Property Finance & Loanback",
+            description:
+              "SSAS property loans and loanback facility for company directors. Up to 50% loanback under HMRC 5-year rules.",
+            provider: {
+              "@type": "FinancialService",
+              name: "SIPP Property Finance",
+              url: "https://sipppropertyfinance.co.uk",
+            },
+            url: "https://sipppropertyfinance.co.uk/ssas-property-finance",
+            category: "SSAS Commercial Property Finance",
+          }),
+        }}
+      />
     </div>
   );
 }

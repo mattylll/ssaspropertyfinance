@@ -119,7 +119,7 @@ export function SsasLoanCalculatorClient() {
       >
         {/* Compliance status */}
         <div
-          className={`glass-card p-5 ${
+          className={`glass-card p-6 ${
             results.isCompliant
               ? "border-emerald-500/30"
               : "border-red-500/30"
@@ -141,7 +141,7 @@ export function SsasLoanCalculatorClient() {
                   ? "HMRC Compliant"
                   : "Exceeds HMRC Limits"}
               </p>
-              <p className="text-xs text-white/40">
+              <p className="text-xs text-white/60">
                 Max loan: {fmt(results.maxPermittedLoan)} | Max term:{" "}
                 {results.hmrcMaxTerm} years
               </p>
@@ -150,26 +150,26 @@ export function SsasLoanCalculatorClient() {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 mb-1">Permitted Loan</p>
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 mb-1">Permitted Loan</p>
             <p className="text-xl font-bold text-gold">
               {fmt(results.requestedLoan)}
             </p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 mb-1">Monthly Repayment</p>
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 mb-1">Monthly Repayment</p>
             <p className="text-xl font-bold text-white">
               {fmt(results.monthlyRepayment)}
             </p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 mb-1">Total Repayment</p>
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 mb-1">Total Repayment</p>
             <p className="text-xl font-bold text-white">
               {fmt(results.totalRepayment)}
             </p>
           </div>
-          <div className="glass-card p-5">
-            <p className="text-xs text-white/40 mb-1">Total Interest</p>
+          <div className="glass-card p-6">
+            <p className="text-xs text-white/60 mb-1">Total Interest</p>
             <p className="text-xl font-bold text-white/70">
               {fmt(results.totalInterest)}
             </p>
@@ -183,7 +183,7 @@ export function SsasLoanCalculatorClient() {
           </h3>
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-white/40 text-xs uppercase tracking-wider">
+              <tr className="text-white/60 text-xs uppercase tracking-wider">
                 <th className="text-left py-2">Year</th>
                 <th className="text-right py-2">Opening</th>
                 <th className="text-right py-2">Repayment</th>

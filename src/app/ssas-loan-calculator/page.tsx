@@ -15,7 +15,7 @@ export default function SsasLoanCalculatorPage() {
           <h1 className="font-heading text-4xl sm:text-5xl text-white mb-4">
             SSAS Loanback Calculator
           </h1>
-          <p className="text-white/50 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-2xl mx-auto">
             Calculate your SSAS loanback under HMRC rules. The maximum loan is
             50% of fund value, repayable within 5 years at a minimum of base rate
             plus 1%.
@@ -25,7 +25,7 @@ export default function SsasLoanCalculatorPage() {
         <SsasLoanCalculatorClient />
 
         <div className="glass-card p-4 mt-8">
-          <p className="text-xs text-white/40 leading-relaxed">
+          <p className="text-sm text-white/60 leading-relaxed">
             <strong className="text-white/60">Important:</strong> SSAS loanback
             rules are set by HMRC. The maximum loan is 50% of the scheme&apos;s
             net assets. The loan must be repaid within 5 years with equal
