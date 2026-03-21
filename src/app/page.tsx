@@ -92,7 +92,7 @@ export default function HomePage() {
               postalCode: "LU6 3QZ",
               addressCountry: "GB",
             },
-            sameAs: [],
+            sameAs: ["https://sipppropertyfinance.co.uk"],
           }),
         }}
       />

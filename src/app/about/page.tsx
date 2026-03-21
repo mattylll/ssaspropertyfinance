@@ -175,6 +175,37 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Network */}
+        <section className="mb-20">
+          <h2 className="font-heading text-3xl text-white mb-6">
+            Our Network
+          </h2>
+          <div className="glass-card p-8">
+            <div className="space-y-5 text-white/60 leading-relaxed text-sm">
+              <p>
+                SSAS Property Finance is part of a specialist pension property finance
+                network. Our sister site,{" "}
+                <a
+                  href="https://sipppropertyfinance.co.uk"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-gold hover:text-gold/80 transition-colors underline underline-offset-2"
+                >
+                  SIPP Property Finance
+                </a>
+                , focuses on Self-Invested Personal Pension commercial property
+                mortgages. Together, we cover the full spectrum of pension-backed
+                property finance in the UK.
+              </p>
+              <p>
+                Whether your pension wrapper is a SSAS or a SIPP, our network ensures
+                you are connected with the right specialist broker and lender panel
+                for your specific structure.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="glass-card p-10 text-center">
           <h2 className="font-heading text-3xl text-white mb-4">

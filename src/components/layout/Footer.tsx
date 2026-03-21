@@ -77,6 +77,25 @@ export function Footer() {
 
         <Separator className="my-8 bg-white/10" />
 
+        {/* Network Sites */}
+        <div className="glass-card p-4 mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          <span className="text-sm font-semibold text-white/60">Our Network:</span>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://sipppropertyfinance.co.uk"
+              target="_blank"
+              rel="noopener"
+              className="text-sm text-gold hover:text-gold/80 transition-colors"
+            >
+              SIPP Property Finance
+            </a>
+            <span className="text-white/20">•</span>
+            <span className="text-sm text-white/40">
+              SSAS Property Finance
+            </span>
+          </div>
+        </div>
+
         {/* Disclaimer */}
         <div className="glass-card p-4 mb-6">
           <p className="text-sm text-white/50 leading-relaxed">
