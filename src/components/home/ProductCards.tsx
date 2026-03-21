@@ -8,27 +8,27 @@ import { Button } from "@/components/ui/button";
 const products = [
   {
     icon: Building2,
-    title: "SIPP Commercial Mortgage",
+    title: "SSAS Commercial Mortgage",
     description:
-      "Purchase commercial property through your SIPP with up to 50% LTV. Fixed and variable rates from specialist pension lenders.",
+      "Purchase commercial property through your SSAS with up to 50% LTV. Fixed and variable rates from specialist pension lenders.",
     stats: ["Up to 50% LTV", "From 5.49%", "25 year terms"],
-    href: "/sipp-property-mortgage",
-    cta: "Explore SIPP Mortgages",
+    href: "/ssas-property-mortgage",
+    cta: "Explore SSAS Mortgages",
   },
   {
     icon: Landmark,
-    title: "SSAS Property Loan",
+    title: "SSAS Loanback",
     description:
-      "SSAS loanback and commercial investment loans. Leverage your company pension scheme for property acquisition and development.",
+      "Borrow up to 50% of your SSAS scheme assets back to the sponsoring employer under HMRC rules. Repaid within 5 years.",
     stats: ["50% loanback", "HMRC 5-year rule", "Multiple trustees"],
     href: "/ssas-property-finance",
-    cta: "Explore SSAS Finance",
+    cta: "Explore SSAS Loanback",
   },
   {
     icon: Briefcase,
-    title: "SIPP Bridging Finance",
+    title: "SSAS Bridging Finance",
     description:
-      "Short-term SIPP bridging loans for commercial property acquisitions requiring fast completion. Competitive rates, flexible terms.",
+      "Short-term SSAS bridging loans for commercial property acquisitions requiring fast completion. Competitive rates, flexible terms.",
     stats: ["Fast completion", "Flexible terms", "Specialist lenders"],
     href: "/contact",
     cta: "Enquire Now",
@@ -37,7 +37,7 @@ const products = [
 
 export function ProductCards() {
   return (
-    <section className="py-16">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,9 +48,10 @@ export function ProductCards() {
           <h2 className="font-heading text-3xl sm:text-4xl text-white mb-4">
             Specialist Pension Property Finance
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
-            Whether you&apos;re purchasing through a SIPP or SSAS, we connect you
-            with the right lender for your commercial property goals.
+          <p className="text-white/50 max-w-2xl mx-auto">
+            Whether you&apos;re purchasing through an SSAS or exploring loanback
+            options, we connect you with the right lender for your commercial
+            property goals.
           </p>
         </motion.div>
 
@@ -72,7 +73,7 @@ export function ProductCards() {
                 {product.title}
               </h3>
 
-              <p className="text-sm text-white/60 mb-5 flex-1">
+              <p className="text-sm text-white/50 mb-5 flex-1">
                 {product.description}
               </p>
 

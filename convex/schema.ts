@@ -54,7 +54,6 @@ export default defineSchema({
     maxLoan: v.number(),
     maxLtv: v.number(),
     minRate: v.number(),
-    sippAccepted: v.boolean(),
     ssasAccepted: v.boolean(),
     propertyTypes: v.array(v.string()),
     features: v.array(v.string()),
@@ -77,4 +76,30 @@ export default defineSchema({
   })
     .index("by_slug", ["slug"])
     .index("by_published", ["isPublished"]),
+
+  articles: defineTable({
+    title: v.string(),
+    slug: v.string(),
+    metaTitle: v.string(),
+    metaDescription: v.string(),
+    excerpt: v.string(),
+    content: v.string(),
+    category: v.string(),
+    tags: v.array(v.string()),
+    author: v.string(),
+    authorTitle: v.string(),
+    heroImage: v.string(),
+    heroImageAlt: v.string(),
+    publishedAt: v.number(),
+    updatedAt: v.number(),
+    readingTime: v.number(),
+    isPublished: v.boolean(),
+    relatedSlugs: v.array(v.string()),
+    primaryKeyword: v.string(),
+    secondaryKeywords: v.array(v.string()),
+  })
+    .index("by_slug", ["slug"])
+    .index("by_published", ["isPublished"])
+    .index("by_category", ["category"])
+    .index("by_publishedAt", ["publishedAt"]),
 });

@@ -50,18 +50,18 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6">
               <Shield className="w-4 h-4 text-gold" />
-              <span className="text-sm text-white/70">Specialist SIPP Broker</span>
+              <span className="text-sm text-white/70">Specialist SSAS Broker</span>
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Commercial Property
               <br />
               Finance Through Your{" "}
-              <span className="text-gold-gradient">SIPP</span>
+              <span className="text-gold-gradient">SSAS</span>
             </h1>
 
             <p className="text-lg text-white/60 mb-8 max-w-xl leading-relaxed">
-              Specialist brokers connecting UK SIPP and SSAS trustees with
+              Specialist brokers connecting UK SSAS trustees and company directors with
               competitive commercial property mortgage rates. Compare lenders,
               calculate your borrowing power, and get indicative terms in minutes.
             </p>
@@ -83,7 +83,7 @@ export function Hero() {
                 variant="outline"
                 className="border-white/20 text-white hover:bg-white/5 hover:text-gold text-base"
               >
-                <Link href="/sipp-mortgage-calculator">
+                <Link href="/ssas-mortgage-calculator">
                   <Calculator className="mr-2 w-5 h-5" />
                   Try Our Calculator
                 </Link>
@@ -101,6 +101,10 @@ export function Hero() {
               <div className="h-4 w-px bg-white/20" />
               <span>15+ Lenders</span>
             </div>
+
+            <p className="mt-4 text-xs text-white/40">
+              Founded by Matt Lenzie — former banker, corporate finance partner, and board advisor to a £2.9bn AUA SIPP business
+            </p>
           </motion.div>
 
           {/* Right — Glass stat cards */}
@@ -114,7 +118,7 @@ export function Hero() {
               {
                 label: "Total Arranged",
                 value: "£50M+",
-                sub: "SIPP property finance",
+                sub: "SSAS property finance",
               },
               {
                 label: "Average LTV",
@@ -127,9 +131,9 @@ export function Hero() {
                 sub: "From application",
               },
               {
-                label: "Client Satisfaction",
-                value: "4.9/5",
-                sub: "From 200+ reviews",
+                label: "Lender Panel",
+                value: "15+",
+                sub: "Specialist SSAS lenders",
               },
             ].map((stat, i) => (
               <motion.div

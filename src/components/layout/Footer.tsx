@@ -4,10 +4,11 @@ import { Separator } from "@/components/ui/separator";
 
 const footerLinks = {
   Products: [
-    { label: "SIPP Property Mortgage", href: "/sipp-property-mortgage" },
-    { label: "SSAS Property Finance", href: "/ssas-property-finance" },
-    { label: "Commercial Property Guide", href: "/commercial-property-sipp" },
+    { label: "SSAS Property Mortgage", href: "/ssas-property-mortgage" },
+    { label: "SSAS Loanback", href: "/ssas-property-finance" },
+    { label: "Commercial Property Guide", href: "/commercial-property-ssas" },
     { label: "Lender Panel", href: "/lenders" },
+    { label: "Guides", href: "/guides" },
   ],
   Learn: [
     { label: "Learning Centre", href: "/learn" },
@@ -18,12 +19,13 @@ const footerLinks = {
     { label: "Case Studies", href: "/learn/case-study-business-owner-buys-office-sipp" },
   ],
   Calculators: [
-    { label: "SIPP Mortgage Calculator", href: "/sipp-mortgage-calculator" },
-    { label: "SIPP LTV Calculator", href: "/sipp-ltv-calculator" },
+    { label: "SSAS Mortgage Calculator", href: "/ssas-mortgage-calculator" },
+    { label: "SSAS LTV Calculator", href: "/ssas-ltv-calculator" },
     { label: "SSAS Loanback Calculator", href: "/ssas-loan-calculator" },
     { label: "Rental Yield Calculator", href: "/rental-yield-calculator" },
   ],
   Company: [
+    { label: "About", href: "/about" },
     { label: "Contact Us", href: "/contact" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
@@ -42,7 +44,7 @@ export function Footer() {
                 <Building2 className="w-5 h-5 text-navy" />
               </div>
               <span className="font-heading text-lg text-gold">
-                SIPP Property Finance
+                SSAS Property Finance
               </span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
@@ -79,8 +81,8 @@ export function Footer() {
         <div className="glass-card p-4 mb-6">
           <p className="text-sm text-white/50 leading-relaxed">
             <strong className="text-white/60">Disclaimer:</strong> Lenzie
-            Consulting Ltd trading as SIPP Property Finance. Registered in England
-            and Wales. Registered office: Hertfordshire, UK. SIPP and SSAS
+            Consulting Ltd trading as SSAS Property Finance. Company number 08174104. Registered in England
+            and Wales. Registered office: Lynch Farm, The Lynch, Kensworth, Beds, LU6 3QZ. SSAS
             commercial property loans are not regulated by the Financial Conduct
             Authority. The information on this website does not constitute
             financial advice. The value of pensions and investments can go down
@@ -93,7 +95,7 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Lenzie Consulting Ltd trading as
-            SIPP Property Finance. All rights reserved.
+            SSAS Property Finance. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-white/40">
             <Link href="/privacy" className="hover:text-gold transition-colors">

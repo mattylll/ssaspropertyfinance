@@ -24,42 +24,35 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ssaspropertyfinance.co.uk"),
   title: {
-    default: "SIPP Property Finance | Specialist Commercial Property Mortgage Brokers",
-    template: "%s | SIPP Property Finance",
+    default: "SSAS Property Finance | Specialist Commercial Property Mortgage Brokers",
+    template: "%s | SSAS Property Finance",
   },
   description:
-    "Specialist SIPP and SSAS commercial property finance brokers. Compare SIPP mortgage rates, use our calculators, and get indicative terms in minutes.",
+    "Specialist SSAS commercial property finance brokers. Compare SSAS mortgage rates, use our calculators, and get indicative terms in minutes.",
   keywords: [
-    "SIPP commercial property mortgage",
-    "SIPP property finance",
+    "SSAS commercial property mortgage",
+    "SSAS property finance",
     "SSAS property loan",
-    "SIPP mortgage calculator",
-    "commercial property SIPP",
-    "SIPP lenders UK",
+    "SSAS mortgage calculator",
+    "commercial property SSAS",
+    "SSAS lenders UK",
     "pension property finance",
   ],
-  authors: [{ name: "SIPP Property Finance" }],
+  authors: [{ name: "SSAS Property Finance" }],
   openGraph: {
     type: "website",
     locale: "en_GB",
-    siteName: "SIPP Property Finance",
-    title: "SIPP Property Finance | Specialist Commercial Property Mortgage Brokers",
+    siteName: "SSAS Property Finance",
+    title: "SSAS Property Finance | Specialist Commercial Property Mortgage Brokers",
     description:
-      "Specialist SIPP and SSAS commercial property finance brokers. Compare rates, use calculators, get indicative terms.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "SIPP Property Finance - Specialist Commercial Property Mortgage Brokers",
-      },
-    ],
+      "Specialist SSAS commercial property finance brokers. Compare rates, use calculators, get indicative terms.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SIPP Property Finance",
-    description: "Specialist SIPP & SSAS commercial property mortgage brokers",
+    title: "SSAS Property Finance",
+    description: "Specialist SSAS commercial property mortgage brokers",
   },
   robots: {
     index: true,
@@ -83,21 +76,6 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </ConvexClientProvider>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FinancialService",
-              name: "SIPP Property Finance",
-              description:
-                "Specialist SIPP and SSAS commercial property finance brokers. Compare mortgage rates and get indicative terms.",
-              url: "https://sipppropertyfinance.co.uk",
-              areaServed: "GB",
-              serviceType: "Commercial Property Mortgage Brokerage",
-            }),
-          }}
-        />
       </body>
     </html>
   );

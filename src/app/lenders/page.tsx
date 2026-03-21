@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title: "SIPP Commercial Property Lenders UK",
+  title: "SSAS Commercial Property Lenders UK",
   description:
-    "Compare specialist SIPP and SSAS commercial property mortgage lenders. Rates from 5.49%, up to 50% LTV, terms to 25 years. UK's leading SIPP lender panel.",
+    "Compare specialist SSAS commercial property mortgage lenders. Rates from 5.49%, up to 50% LTV, terms to 25 years. UK's leading SSAS lender panel.",
+  alternates: { canonical: "/lenders" },
 };
 
 const lenders = [
@@ -17,7 +18,6 @@ const lenders = [
     maxLoan: "£3,000,000",
     maxLtv: "50%",
     minRate: "5.49%",
-    sipp: true,
     ssas: true,
     propertyTypes: ["Office", "Industrial", "Retail", "Mixed-Use"],
     features: ["Fixed & Variable rates", "Up to 25 year terms", "Interest-only available"],
@@ -29,8 +29,7 @@ const lenders = [
     maxLoan: "£5,000,000",
     maxLtv: "50%",
     minRate: "5.99%",
-    sipp: true,
-    ssas: false,
+    ssas: true,
     propertyTypes: ["Office", "Industrial", "Retail"],
     features: ["Fast turnaround", "Interest-only available", "Specialist team"],
     termMax: "20 years",
@@ -41,7 +40,6 @@ const lenders = [
     maxLoan: "£15,000,000",
     maxLtv: "50%",
     minRate: "5.75%",
-    sipp: true,
     ssas: true,
     propertyTypes: ["Office", "Industrial", "Retail", "Mixed-Use"],
     features: ["Dedicated relationship manager", "Flexible structuring", "Large loans"],
@@ -53,7 +51,6 @@ const lenders = [
     maxLoan: "£10,000,000",
     maxLtv: "50%",
     minRate: "5.89%",
-    sipp: true,
     ssas: true,
     propertyTypes: ["Office", "Industrial", "Retail", "Mixed-Use"],
     features: ["Multiple property types", "Broker-only", "Portfolio lending"],
@@ -65,10 +62,9 @@ const lenders = [
     maxLoan: "£5,000,000",
     maxLtv: "50%",
     minRate: "6.25%",
-    sipp: true,
-    ssas: false,
+    ssas: true,
     propertyTypes: ["Office", "Industrial", "Retail"],
-    features: ["Specialist SIPP lending", "Competitive rates", "Fast decisions"],
+    features: ["Specialist SSAS lending", "Competitive rates", "Fast decisions"],
     termMax: "20 years",
   },
   {
@@ -77,7 +73,6 @@ const lenders = [
     maxLoan: "£25,000,000",
     maxLtv: "50%",
     minRate: "5.69%",
-    sipp: true,
     ssas: true,
     propertyTypes: ["Office", "Industrial", "Retail", "Mixed-Use"],
     features: ["Large loan specialist", "Portfolio landlord friendly", "Flexible terms"],
@@ -91,24 +86,12 @@ export default function LendersPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="font-heading text-4xl sm:text-5xl text-white mb-4">
-            SIPP Commercial Property Lenders
+            SSAS Commercial Property Lenders
           </h1>
-          <p className="text-white/60 max-w-2xl mx-auto">
-            Our specialist panel of UK SIPP and SSAS commercial property mortgage
+          <p className="text-white/50 max-w-2xl mx-auto">
+            Our specialist panel of UK SSAS commercial property mortgage
             lenders. We compare terms across all lenders to find the best deal
-            for your pension fund.
-          </p>
-        </div>
-
-        <div className="glass-card p-6 mb-8">
-          <p className="text-sm text-white/60 leading-relaxed">
-            Our lender panel comprises specialist UK institutions that actively
-            lend to SIPP and SSAS trustees for commercial property acquisition.
-            Each lender has been vetted for their understanding of pension
-            property transactions, speed of service, and competitive terms. As
-            whole-of-market brokers, we are not tied to any single lender — we
-            compare across the full panel to secure the most favourable rates,
-            LTV, and terms for your specific pension fund and property type.
+            for your pension scheme.
           </p>
         </div>
 
@@ -127,18 +110,10 @@ export default function LendersPage() {
                     </h2>
                   </div>
                   <div className="flex gap-2 mt-2">
-                    {lender.sipp && (
-                      <Badge
-                        variant="outline"
-                        className="border-gold/30 text-gold text-xs"
-                      >
-                        SIPP
-                      </Badge>
-                    )}
                     {lender.ssas && (
                       <Badge
                         variant="outline"
-                        className="border-blue-accent/30 text-blue-accent text-xs"
+                        className="border-gold/30 text-gold text-xs"
                       >
                         SSAS
                       </Badge>
@@ -149,25 +124,25 @@ export default function LendersPage() {
                 {/* Key stats */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:w-1/3">
                   <div>
-                    <p className="text-xs text-white/60">Min Loan</p>
+                    <p className="text-xs text-white/40">Min Loan</p>
                     <p className="text-sm font-medium text-white">
                       {lender.minLoan}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-white/60">Max Loan</p>
+                    <p className="text-xs text-white/40">Max Loan</p>
                     <p className="text-sm font-medium text-white">
                       {lender.maxLoan}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-white/60">Max LTV</p>
+                    <p className="text-xs text-white/40">Max LTV</p>
                     <p className="text-sm font-medium text-gold">
                       {lender.maxLtv}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-white/60">From</p>
+                    <p className="text-xs text-white/40">From</p>
                     <p className="text-sm font-medium text-gold">
                       {lender.minRate}
                     </p>
@@ -180,7 +155,7 @@ export default function LendersPage() {
                     {lender.features.map((f) => (
                       <p
                         key={f}
-                        className="text-xs text-white/60 flex items-center gap-1.5"
+                        className="text-xs text-white/50 flex items-center gap-1.5"
                       >
                         <Check className="w-3 h-3 text-emerald-400" />
                         {f}
@@ -207,12 +182,12 @@ export default function LendersPage() {
         </div>
 
         <div className="glass-card p-4 mt-8">
-          <p className="text-sm text-white/60 leading-relaxed">
+          <p className="text-xs text-white/40 leading-relaxed">
             <strong className="text-white/60">Note:</strong> Rates and criteria
             shown are indicative and subject to change. Actual terms depend on
             property type, location, borrower profile, and market conditions.
-            All SIPP commercial property mortgages are subject to lender
-            approval and SIPP provider acceptance.
+            All SSAS commercial property mortgages are subject to lender
+            approval and SSAS trustee acceptance.
           </p>
         </div>
       </div>
@@ -220,31 +195,31 @@ export default function LendersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FinancialService",
-            name: "SIPP Property Finance - Lender Panel",
-            description:
-              "Compare specialist SIPP and SSAS commercial property mortgage lenders. Rates from 5.49%, up to 50% LTV.",
-            url: "https://sipppropertyfinance.co.uk/lenders",
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: "SIPP Commercial Property Lenders",
-              itemListElement: lenders.map((lender, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                item: {
-                  "@type": "FinancialProduct",
-                  name: `${lender.name} - SIPP Mortgage`,
-                  description: lender.features.join(". "),
-                  provider: {
-                    "@type": "Organization",
-                    name: lender.name,
-                  },
-                },
-              })),
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              name: "SSAS Commercial Property Lenders UK",
+              description: "Specialist SSAS commercial property mortgage lenders",
+              numberOfItems: 6,
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "West Bromwich Building Society" },
+                { "@type": "ListItem", position: 2, name: "Shawbrook Bank" },
+                { "@type": "ListItem", position: 3, name: "Redwood Bank" },
+                { "@type": "ListItem", position: 4, name: "Aldermore" },
+                { "@type": "ListItem", position: 5, name: "Hampshire Trust Bank" },
+                { "@type": "ListItem", position: 6, name: "Paragon Bank" },
+              ],
             },
-          }),
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://ssaspropertyfinance.co.uk" },
+                { "@type": "ListItem", position: 2, name: "SSAS Lenders", item: "https://ssaspropertyfinance.co.uk/lenders" },
+              ],
+            },
+          ]),
         }}
       />
     </div>

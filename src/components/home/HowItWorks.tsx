@@ -16,21 +16,21 @@ const steps = [
     step: "02",
     title: "Expert Assessment",
     description:
-      "Our specialist broker reviews your requirements and identifies the most suitable SIPP lenders.",
+      "Our specialist broker reviews your requirements and identifies the most suitable SSAS lenders.",
   },
   {
     icon: Handshake,
     step: "03",
     title: "Lender Matching",
     description:
-      "We present you with indicative terms from multiple specialist SIPP/SSAS mortgage lenders.",
+      "We present you with indicative terms from multiple specialist SSAS mortgage lenders.",
   },
   {
     icon: CheckCircle,
     step: "04",
     title: "Completion",
     description:
-      "We manage the full application process through to completion, liaising with your SIPP trustee.",
+      "We manage the full application process through to completion, liaising with your SSAS trustees.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function HowItWorks() {
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             From first enquiry to completion, we guide you through every step of
-            securing SIPP property finance.
+            securing SSAS property finance.
           </p>
         </motion.div>
 

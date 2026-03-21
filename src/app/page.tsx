@@ -10,6 +10,7 @@ import { LenderPanel } from "@/components/home/LenderPanel";
 import { FAQAccordion } from "@/components/home/FAQAccordion";
 import { FeaturedArticles } from "@/components/home/FeaturedArticles";
 import { FounderSection } from "@/components/home/FounderSection";
+import { LatestGuides } from "@/components/home/LatestGuides";
 import { LeadCaptureSection } from "@/components/home/LeadCaptureSection";
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function HomePage() {
       <FounderSection />
       <FAQAccordion />
       <FeaturedArticles />
+      <LatestGuides />
       <LeadCaptureSection />
 
       {/* Organization + FinancialService Schema */}
@@ -52,18 +54,19 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": ["FinancialService", "Organization"],
-            name: "SIPP Property Finance",
+            name: "SSAS Property Finance",
             description:
-              "Specialist SIPP and SSAS commercial property finance brokers",
-            url: "https://sipppropertyfinance.co.uk",
+              "Specialist SSAS commercial property finance brokers",
+            url: "https://ssaspropertyfinance.co.uk",
             areaServed: {
               "@type": "Country",
               name: "United Kingdom",
             },
             serviceType: "Commercial Property Mortgage Brokerage",
             knowsAbout: [
-              "SIPP Commercial Property Mortgage",
+              "SSAS Commercial Property Mortgage",
               "SSAS Property Loan",
+              "SSAS Loanback",
               "Pension Property Finance",
               "Commercial Mortgage Brokerage",
             ],
@@ -81,6 +84,15 @@ export default function HomePage() {
                 "Pension Trustee Advisory",
               ],
             },
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Lynch Farm, The Lynch",
+              addressLocality: "Kensworth",
+              addressRegion: "Bedfordshire",
+              postalCode: "LU6 3QZ",
+              addressCountry: "GB",
+            },
+            sameAs: [],
           }),
         }}
       />

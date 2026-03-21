@@ -30,32 +30,32 @@ export const seed = mutation({
 
     const studies = [
       {
-        title: "Industrial Unit Acquisition via SIPP",
-        slug: "industrial-unit-sipp-acquisition",
+        title: "Industrial Unit Acquisition via SSAS",
+        slug: "industrial-unit-ssas-acquisition",
         propertyType: "Industrial",
         loanSize: 450000,
         ltv: 50,
         location: "Birmingham",
         outcome: "Completed in 6 weeks with 50% LTV",
         summary:
-          "A business owner used their SIPP to purchase a 5,000 sq ft industrial unit, securing a tenant on a 10-year FRI lease.",
+          "A company director used their SSAS to purchase a 5,000 sq ft industrial unit, securing a tenant on a 10-year FRI lease.",
         content:
-          "Our client, a manufacturing business owner, identified a prime industrial unit near their existing operations. With a SIPP fund valued at approximately £900,000, they were well-positioned to leverage their pension for commercial property acquisition.",
+          "Our client, a manufacturing company director, identified a prime industrial unit near their existing operations. With an SSAS fund valued at approximately £900,000, the trustees were well-positioned to leverage the pension scheme for commercial property acquisition.",
         isPublished: true,
         createdAt: Date.now(),
       },
       {
-        title: "Office Building Purchase for IFA Practice",
-        slug: "office-building-ifa-practice",
+        title: "Office Building Purchase for Director",
+        slug: "office-building-director-purchase",
         propertyType: "Office",
         loanSize: 325000,
         ltv: 48,
         location: "Manchester",
         outcome: "Below-market rate secured at 5.49%",
         summary:
-          "An IFA purchased their practice's office building through their SIPP, paying rent from the business back into their pension.",
+          "A company director purchased their business's office building through the SSAS, paying rent from the company back into the pension scheme.",
         content:
-          "This case involved a well-established IFA practice seeking to optimise their pension whilst securing long-term premises. The SIPP purchased the office building, with the practice paying a market-rate rent directly into the pension fund.",
+          "This case involved a well-established company seeking to optimise their directors' pension scheme whilst securing long-term premises. The SSAS purchased the office building, with the sponsoring employer paying a market-rate rent directly into the pension scheme.",
         isPublished: true,
         createdAt: Date.now() - 86400000,
       },

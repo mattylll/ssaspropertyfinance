@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "SSAS Loanback Calculator",
   description:
     "Calculate SSAS loanback repayments under HMRC 5-year rules. See maximum permitted loan, monthly repayments, and compliance status.",
+  alternates: { canonical: "/ssas-loan-calculator" },
 };
 
 export default function SsasLoanCalculatorPage() {
@@ -39,14 +40,22 @@ export default function SsasLoanCalculatorPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: JSON.stringify([{
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             name: "SSAS Loanback Calculator",
             applicationCategory: "FinanceApplication",
             operatingSystem: "Web",
             offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
-          }),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://ssaspropertyfinance.co.uk" },
+              { "@type": "ListItem", position: 2, name: "SSAS Loanback Calculator", item: "https://ssaspropertyfinance.co.uk/ssas-loan-calculator" },
+            ],
+          }]),
         }}
       />
     </div>

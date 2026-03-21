@@ -44,14 +44,14 @@ export async function POST(request: NextRequest) {
     // Send confirmation email to prospect
     if (resend) {
       await resend.emails.send({
-        from: "SIPP Property Finance <noreply@sipppropertyfinance.co.uk>",
+        from: "SSAS Property Finance <noreply@ssaspropertyfinance.co.uk>",
         to: data.email,
-        subject: "Your SIPP Property Finance Enquiry — Received",
+        subject: "Your SSAS Property Finance Enquiry — Received",
         html: `
           <div style="font-family: 'DM Sans', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0A1628; color: #F0F0F0; padding: 40px;">
             <h1 style="color: #C9A84C; font-size: 24px; margin-bottom: 16px;">Thank You, ${data.fullName}</h1>
             <p style="color: rgba(255,255,255,0.6); line-height: 1.6;">
-              We have received your SIPP property finance enquiry and a specialist broker will review your requirements within 24 hours.
+              We have received your SSAS property finance enquiry and a specialist broker will review your requirements within 24 hours.
             </p>
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 20px; margin: 24px 0;">
               <h2 style="color: #C9A84C; font-size: 16px; margin-bottom: 12px;">Your Enquiry Summary</h2>
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
             </div>
             <p style="color: rgba(255,255,255,0.4); font-size: 12px; line-height: 1.5;">
               This email confirms receipt of your enquiry only. It is not a mortgage offer or financial advice.
-              SIPP Property Finance is a trading name of Lenzie Consulting Ltd. SIPP and SSAS commercial property loans are not regulated by the FCA.
+              SSAS Property Finance is a trading name of Lenzie Consulting Ltd. SSAS commercial property loans are not regulated by the FCA.
             </p>
           </div>
         `,
@@ -72,12 +72,12 @@ export async function POST(request: NextRequest) {
 
       // Send notification to broker
       await resend.emails.send({
-        from: "SIPP Property Finance <noreply@sipppropertyfinance.co.uk>",
-        to: process.env.BROKER_EMAIL || "enquiries@sipppropertyfinance.co.uk",
-        subject: `New SIPP Enquiry — ${data.fullName} — ${fmt(data.propertyValue)} ${data.propertyType}`,
+        from: "SSAS Property Finance <noreply@ssaspropertyfinance.co.uk>",
+        to: process.env.BROKER_EMAIL || "enquiries@ssaspropertyfinance.co.uk",
+        subject: `New SSAS Enquiry — ${data.fullName} — ${fmt(data.propertyValue)} ${data.propertyType}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px;">
-            <h1>New SIPP Property Finance Enquiry</h1>
+            <h1>New SSAS Property Finance Enquiry</h1>
             <h2>Contact</h2>
             <p><strong>Name:</strong> ${data.fullName}</p>
             <p><strong>Email:</strong> ${data.email}</p>

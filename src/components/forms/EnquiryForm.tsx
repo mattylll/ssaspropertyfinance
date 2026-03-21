@@ -150,7 +150,7 @@ export function EnquiryForm() {
         <h3 className="font-heading text-2xl text-white mb-2">
           Enquiry Submitted
         </h3>
-        <p className="text-white/60 max-w-md mx-auto">
+        <p className="text-white/50 max-w-md mx-auto">
           Thank you for your enquiry. A specialist broker will review your
           requirements and be in touch within 24 hours with indicative terms.
         </p>
@@ -168,14 +168,14 @@ export function EnquiryForm() {
               className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${
                 i <= step
                   ? "gold-gradient text-navy"
-                  : "bg-white/5 text-white/40"
+                  : "bg-white/5 text-white/30"
               }`}
             >
               <s.icon className="w-5 h-5" />
             </div>
             <span
               className={`hidden sm:block ml-2 text-xs ${
-                i <= step ? "text-gold" : "text-white/40"
+                i <= step ? "text-gold" : "text-white/30"
               }`}
             >
               {s.label}
@@ -316,7 +316,6 @@ export function EnquiryForm() {
                     <SelectValue placeholder="Select scheme type" />
                   </SelectTrigger>
                   <SelectContent className="bg-navy-mid border-white/10">
-                    <SelectItem value="sipp">SIPP</SelectItem>
                     <SelectItem value="ssas">SSAS</SelectItem>
                   </SelectContent>
                 </Select>
@@ -346,7 +345,7 @@ export function EnquiryForm() {
 
               <div>
                 <Label className="text-white/70 text-sm mb-2 block">
-                  SIPP/SSAS Provider Name (optional)
+                  SSAS Provider Name (optional)
                 </Label>
                 <Input
                   {...register("providerName")}
@@ -403,10 +402,10 @@ export function EnquiryForm() {
                 />
                 {ltvCalc > 0 && (
                   <p
-                    className={`text-xs mt-1 ${ltvCalc > 50 ? "text-red-400" : "text-white/60"}`}
+                    className={`text-xs mt-1 ${ltvCalc > 50 ? "text-red-400" : "text-white/40"}`}
                   >
                     Calculated LTV: {ltvCalc}%
-                    {ltvCalc > 50 && " — exceeds 50% SIPP cap"}
+                    {ltvCalc > 50 && " — exceeds 50% SSAS cap"}
                   </p>
                 )}
                 {errors.loanAmount && (
@@ -576,7 +575,7 @@ export function EnquiryForm() {
                     {...register("gdprConsent")}
                     className="mt-1 accent-gold"
                   />
-                  <span className="text-xs text-white/60">
+                  <span className="text-xs text-white/50">
                     I have read and agree to the{" "}
                     <a href="/privacy" className="text-gold underline">
                       privacy policy
@@ -597,8 +596,8 @@ export function EnquiryForm() {
                     {...register("marketingConsent")}
                     className="mt-1 accent-gold"
                   />
-                  <span className="text-xs text-white/60">
-                    I would like to receive marketing communications about SIPP
+                  <span className="text-xs text-white/50">
+                    I would like to receive marketing communications about SSAS
                     property finance products and market updates.
                   </span>
                 </label>

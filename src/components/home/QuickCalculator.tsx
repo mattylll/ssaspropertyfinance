@@ -7,13 +7,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { calculateSippLtv } from "@/lib/calculators/sipp-ltv";
+import { calculateSsasLtv } from "@/lib/calculators/ssas-ltv";
 
 export function QuickCalculator() {
   const [propertyValue, setPropertyValue] = useState(500000);
   const [fundValue, setFundValue] = useState(400000);
 
-  const results = calculateSippLtv({ propertyValue, sippFundValue: fundValue });
+  const results = calculateSsasLtv({ propertyValue, ssasFundValue: fundValue });
 
   const formatCurrency = (n: number) =>
     new Intl.NumberFormat("en-GB", {
@@ -23,7 +23,7 @@ export function QuickCalculator() {
     }).format(n);
 
   return (
-    <section className="py-16">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Calculator */}
@@ -41,8 +41,8 @@ export function QuickCalculator() {
                 <h3 className="font-heading text-xl text-white">
                   Quick LTV Calculator
                 </h3>
-                <p className="text-sm text-white/60">
-                  See how much your SIPP can borrow
+                <p className="text-sm text-white/50">
+                  See how much your SSAS can borrow
                 </p>
               </div>
             </div>
@@ -53,7 +53,7 @@ export function QuickCalculator() {
                   Property Value
                 </Label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40">
                     £
                   </span>
                   <Input
@@ -67,10 +67,10 @@ export function QuickCalculator() {
 
               <div>
                 <Label className="text-white/70 text-sm mb-2 block">
-                  SIPP Fund Value
+                  SSAS Fund Value
                 </Label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40">
                     £
                   </span>
                   <Input
@@ -88,7 +88,7 @@ export function QuickCalculator() {
                 asChild
                 className="w-full gold-gradient text-navy font-semibold hover:opacity-90"
               >
-                <Link href="/sipp-mortgage-calculator">
+                <Link href="/ssas-mortgage-calculator">
                   Full Calculator
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -104,34 +104,34 @@ export function QuickCalculator() {
             className="space-y-4"
           >
             <h2 className="font-heading text-3xl text-white mb-2">
-              Your SIPP Borrowing Power
+              Your SSAS Borrowing Power
             </h2>
-            <p className="text-white/60 mb-6">
-              SIPPs can borrow up to 50% of the property value. Here&apos;s what your
-              pension fund could achieve.
+            <p className="text-white/50 mb-6">
+              An SSAS can borrow up to 50% of the property value. Here&apos;s what your
+              pension scheme could achieve.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="glass-card p-6">
-                <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
+              <div className="glass-card p-5">
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
                   Max Borrowing
                 </p>
                 <p className="text-2xl font-bold text-gold">
                   {formatCurrency(results.maxBorrowing)}
                 </p>
-                <p className="text-xs text-white/60 mt-1">50% of property value</p>
+                <p className="text-xs text-white/40 mt-1">50% of property value</p>
               </div>
-              <div className="glass-card p-6">
-                <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
-                  SIPP Deposit
+              <div className="glass-card p-5">
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+                  SSAS Deposit
                 </p>
                 <p className="text-2xl font-bold text-white">
                   {formatCurrency(results.depositFromFund)}
                 </p>
-                <p className="text-xs text-white/60 mt-1">From your pension fund</p>
+                <p className="text-xs text-white/40 mt-1">From your pension fund</p>
               </div>
-              <div className="glass-card p-6">
-                <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
+              <div className="glass-card p-5">
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
                   Remaining Fund
                 </p>
                 <p
@@ -139,26 +139,26 @@ export function QuickCalculator() {
                 >
                   {formatCurrency(results.remainingFund)}
                 </p>
-                <p className="text-xs text-white/60 mt-1">
+                <p className="text-xs text-white/40 mt-1">
                   {results.fundSufficient ? "Fund sufficient" : "Insufficient funds"}
                 </p>
               </div>
-              <div className="glass-card p-6">
-                <p className="text-xs text-white/60 uppercase tracking-wider mb-1">
+              <div className="glass-card p-5">
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
                   Buying Power
                 </p>
                 <p className="text-2xl font-bold text-blue-accent">
                   {formatCurrency(results.totalPurchasePower)}
                 </p>
-                <p className="text-xs text-white/60 mt-1">
+                <p className="text-xs text-white/40 mt-1">
                   Maximum property value
                 </p>
               </div>
             </div>
 
-            <p className="text-xs text-white/40 mt-4">
+            <p className="text-xs text-white/30 mt-4">
               For illustrative purposes only. Actual borrowing depends on lender
-              criteria, property type, and SIPP provider approval.
+              criteria, property type, and SSAS trustee approval.
             </p>
           </motion.div>
         </div>

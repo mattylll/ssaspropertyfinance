@@ -156,8 +156,8 @@ export function RentalYieldCalculatorClient() {
           </p>
           <p className="text-xs text-white/40 mt-1">
             {results.annualSurplus >= 0
-              ? "Your SIPP generates a surplus after mortgage costs"
-              : "Your SIPP will need topping up to cover the shortfall"}
+              ? "Your SSAS generates a surplus after mortgage costs"
+              : "Your SSAS will need topping up to cover the shortfall"}
           </p>
         </div>
 

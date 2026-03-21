@@ -8,27 +8,28 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   {
-    label: "SIPP Mortgage",
-    href: "/sipp-property-mortgage",
+    label: "SSAS Mortgage",
+    href: "/ssas-property-mortgage",
     icon: Building2,
   },
   {
-    label: "SSAS Finance",
+    label: "SSAS Loanback",
     href: "/ssas-property-finance",
     icon: FileText,
   },
   {
     label: "Calculators",
-    href: "/sipp-mortgage-calculator",
+    href: "/ssas-mortgage-calculator",
     icon: Calculator,
     children: [
-      { label: "SIPP Mortgage Calculator", href: "/sipp-mortgage-calculator" },
-      { label: "SIPP LTV Calculator", href: "/sipp-ltv-calculator" },
+      { label: "SSAS Mortgage Calculator", href: "/ssas-mortgage-calculator" },
+      { label: "SSAS LTV Calculator", href: "/ssas-ltv-calculator" },
       { label: "SSAS Loanback Calculator", href: "/ssas-loan-calculator" },
       { label: "Rental Yield Calculator", href: "/rental-yield-calculator" },
     ],
   },
-  { label: "Property Guide", href: "/commercial-property-sipp" },
+  { label: "Property Guide", href: "/commercial-property-ssas" },
+  { label: "Guides", href: "/guides", icon: FileText },
   { label: "Learn", href: "/learn" },
   { label: "Lenders", href: "/lenders" },
   { label: "Contact", href: "/contact", icon: Phone },
@@ -48,7 +49,7 @@ export function Navbar() {
               <Building2 className="w-5 h-5 text-navy" />
             </div>
             <span className="font-heading text-lg text-gold">
-              SIPP Property Finance
+              SSAS Property Finance
             </span>
           </Link>
 
