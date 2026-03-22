@@ -8,14 +8,16 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   {
-    label: "SSAS Mortgage",
-    href: "/ssas-property-mortgage",
+    label: "Products",
+    href: "/ssas-term-loan",
     icon: Building2,
-  },
-  {
-    label: "SSAS Loanback",
-    href: "/ssas-property-finance",
-    icon: FileText,
+    children: [
+      { label: "SSAS Term Loan", href: "/ssas-term-loan" },
+      { label: "SSAS Bridging Finance", href: "/ssas-bridging-finance" },
+      { label: "SSAS Development Finance", href: "/ssas-development-finance" },
+      { label: "SSAS Loanback", href: "/ssas-property-finance" },
+      { label: "SSAS Commercial Mortgage", href: "/ssas-property-mortgage" },
+    ],
   },
   {
     label: "Calculators",
@@ -37,7 +39,7 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [calcDropdown, setCalcDropdown] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10">
@@ -60,17 +62,16 @@ export function Navbar() {
                 <div
                   key={link.label}
                   className="relative"
-                  onMouseEnter={() => setCalcDropdown(true)}
-                  onMouseLeave={() => setCalcDropdown(false)}
+                  onMouseEnter={() => setOpenDropdown(link.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  <Link
-                    href={link.href}
+                  <button
                     className="nav-link-hover px-3 py-2 text-sm text-white/70 hover:text-gold transition-colors rounded-lg hover:bg-white/5"
                   >
                     {link.label}
-                  </Link>
+                  </button>
                   <AnimatePresence>
-                    {calcDropdown && (
+                    {openDropdown === link.label && (
                       <motion.div
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}

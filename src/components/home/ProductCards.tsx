@@ -2,18 +2,36 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Building2, Landmark, Briefcase } from "lucide-react";
+import { ArrowRight, Building2, Landmark, Briefcase, Zap, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const products = [
   {
     icon: Building2,
-    title: "SSAS Commercial Mortgage",
+    title: "SSAS Term Loan",
     description:
-      "Purchase commercial property through your SSAS with up to 50% LTV. Fixed and variable rates from specialist pension lenders.",
-    stats: ["Up to 50% LTV", "From 5.49%", "25 year terms"],
-    href: "/ssas-property-mortgage",
-    cta: "Explore SSAS Mortgages",
+      "Long-term commercial property mortgages through your SSAS. Fixed and variable rates from 5.49% with terms up to 25 years.",
+    stats: ["Up to 25 years", "From 5.49%", "Fixed & variable"],
+    href: "/ssas-term-loan",
+    cta: "Explore Term Loans",
+  },
+  {
+    icon: Zap,
+    title: "SSAS Bridging Finance",
+    description:
+      "Short-term SSAS bridging loans for commercial property acquisitions requiring fast completion. Competitive rates, flexible terms.",
+    stats: ["4-6 week completion", "6-18 month terms", "Up to 50% LTV"],
+    href: "/ssas-bridging-finance",
+    cta: "Explore Bridging",
+  },
+  {
+    icon: HardHat,
+    title: "SSAS Development Finance",
+    description:
+      "Fund commercial property conversions, refurbishments, and ground-up development through your SSAS with staged drawdowns.",
+    stats: ["Staged drawdowns", "GDV-based", "Commercial only"],
+    href: "/ssas-development-finance",
+    cta: "Explore Development",
   },
   {
     icon: Landmark,
@@ -26,12 +44,12 @@ const products = [
   },
   {
     icon: Briefcase,
-    title: "SSAS Bridging Finance",
+    title: "SSAS Commercial Mortgage",
     description:
-      "Short-term SSAS bridging loans for commercial property acquisitions requiring fast completion. Competitive rates, flexible terms.",
-    stats: ["Fast completion", "Flexible terms", "Specialist lenders"],
-    href: "/contact",
-    cta: "Enquire Now",
+      "Purchase commercial property through your SSAS with up to 50% LTV. Fixed and variable rates from specialist pension lenders.",
+    stats: ["Up to 50% LTV", "From 5.49%", "25 year terms"],
+    href: "/ssas-property-mortgage",
+    cta: "Explore SSAS Mortgages",
   },
 ];
 
@@ -55,7 +73,7 @@ export function ProductCards() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, i) => (
             <motion.div
               key={product.title}

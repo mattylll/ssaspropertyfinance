@@ -4,6 +4,9 @@ import { Separator } from "@/components/ui/separator";
 
 const footerLinks = {
   Products: [
+    { label: "SSAS Term Loan", href: "/ssas-term-loan" },
+    { label: "SSAS Bridging Finance", href: "/ssas-bridging-finance" },
+    { label: "SSAS Development Finance", href: "/ssas-development-finance" },
     { label: "SSAS Property Mortgage", href: "/ssas-property-mortgage" },
     { label: "SSAS Loanback", href: "/ssas-property-finance" },
     { label: "Commercial Property Guide", href: "/commercial-property-ssas" },
