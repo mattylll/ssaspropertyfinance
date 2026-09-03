@@ -129,6 +129,18 @@ export function Footer() {
             <span>Lenzie Consulting Ltd</span>
           </div>
         </div>
+
+        <p className="mt-4 text-center text-xs text-white/40 sm:text-left">
+          Also from Lenzie Consulting:{' '}
+          <a
+            href="https://securedbusinessloans.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gold transition-colors"
+          >
+            Business Loan Eligibility &amp; Rates
+          </a>
+        </p>
       </div>
     </footer>
   );
