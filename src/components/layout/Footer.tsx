@@ -93,6 +93,24 @@ export function Footer() {
               SIPP Property Finance
             </a>
             <span className="text-white/20">•</span>
+            <a
+              href="https://www.mbofinance.co.uk/"
+              target="_blank"
+              rel="noopener"
+              className="text-sm text-gold hover:text-gold/80 transition-colors"
+            >
+              Management buyout finance
+            </a>
+            <span className="text-white/20">•</span>
+            <a
+              href="https://www.leveragedbuyoutfinance.co.uk/"
+              target="_blank"
+              rel="noopener"
+              className="text-sm text-gold hover:text-gold/80 transition-colors"
+            >
+              Leveraged buyout finance
+            </a>
+            <span className="text-white/20">•</span>
             <span className="text-sm text-white/40">
               SSAS Property Finance
             </span>
